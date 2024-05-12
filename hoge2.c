@@ -7,11 +7,11 @@ typedef struct{
 }RESULT;
 
 int main(void){
+    //variables setting
     int mat[N][N]={0},an=9,bn=9;
     int i,j;
-    char a[]="tsudanuma",b[N];
-    //a is target ,b is input
-    RESULT rsl[20];
+    char a[]="tsudanuma",b[N]; //a is target ,b is input
+    RESULT rsl[20]; //result:differece between a and b
     
     //input
     do{
@@ -22,6 +22,7 @@ int main(void){
         }
     }while(i==N);
 
+    //process1 make matrix
     for(i=0;i<an;i++){
         for(j=0;j<bn;j++){
             if(a[i]==b[j]){
@@ -36,6 +37,7 @@ int main(void){
         mat[an][i]=3;
     }
     
+    //process2 rearch
     int c=0;
     i=0;j=0;
     while(i+j<an+bn){
@@ -74,6 +76,7 @@ int main(void){
     }
     */
     
+    //output
     c=0;
     printf("result:\n    ");
     for(i=0;i<bn;i++){
